@@ -40,30 +40,10 @@
                    d.downloadUrl = "https:" + d.downloadUrl;
                 }
                 
-                html += "<div class='file-item'><a target='_blank' href='";
-                html += d.downloadUrl ? d.downloadUrl : d.isFolder ? d.fileId + ".html" : "javascript:;";
-                html += "'>";
-                html += "<table><tr><td><div class='file-icon ";
-                html += d.isFolder ? "folder" : d.fileType;
-                html += "'></div></td><td>";
-                html += "<p class='name ellipsis'>"
-                html += d.fileName;
-                html += "</p>";
-                html += "<p class='time'>"
-                html += d.createTime;
-                html += "</p></td></tr></table>";
-                html += "</a></div>";
-                
-                
-//               html += "<div class='file-item'><a  href='";
-//                html += d.isFolder ? d.downloadUrl ? d.downloadUrl : d.fileId + ".html" : "javascript:;";
-//                html += "' ";
-//                if(d.downloadUrl){
-//                    html += "onclick='down(\"";
-//                     html+=d.downloadUrl
-//                }
-//                
-//                html += "\")'><table><tr><td><div class='file-icon ";
+//                html += "<div class='file-item'><a target='_blank' href='";
+//                html += d.downloadUrl ? d.downloadUrl : d.isFolder ? d.fileId + ".html" : "javascript:;";
+//                html += "'>";
+//                html += "<table><tr><td><div class='file-icon ";
 //                html += d.isFolder ? "folder" : d.fileType;
 //                html += "'></div></td><td>";
 //                html += "<p class='name ellipsis'>"
@@ -73,6 +53,26 @@
 //                html += d.createTime;
 //                html += "</p></td></tr></table>";
 //                html += "</a></div>";
+                
+                
+               html += "<div class='file-item'><a  href='";
+                html += d.isFolder ? d.downloadUrl ? d.downloadUrl : d.fileId + ".html" : "javascript:;";
+                html += "' ";
+                if(d.downloadUrl){
+                    html += "onclick='down(\"";
+                     html+=d.downloadUrl
+                }
+                
+                html += "\")'><table><tr><td><div class='file-icon ";
+                html += d.isFolder ? "folder" : d.fileType;
+                html += "'></div></td><td>";
+                html += "<p class='name ellipsis'>"
+                html += d.fileName;
+                html += "</p>";
+                html += "<p class='time'>"
+                html += d.createTime;
+                html += "</p></td></tr></table>";
+                html += "</a></div>";
             }
            
             
